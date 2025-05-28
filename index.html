@@ -2,30 +2,53 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>kalkulator konversi suhu</title>
-    <link rel="styesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Konversi Suhu</title>
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="container">
-      <h1>kalkulator konversi suhu</h1>
+      <h1>Website Konversi Suhu</h1>
 
-      <form id="suhuform">
-        <label for="suhu">masukkan suhu</label>
-        <input type="number" id="suhu" required />
+      <div class="description">
+        <p>
+          Website ini digunakan untuk mengkonversi suhu dari Celsius ke
+          Fahrenheit dan sebaliknya. Masukkan nilai suhu, pilih satuan awal,
+          lalu klik tombol konversi untuk melihat hasilnya beserta penjelasan
+          dan rumus yang digunakan.
+        </p>
+      </div>
 
-        <label for="konversi">konversi ke:</label>
-        <select id="konversi">
-          <option value="c">celcius</option>
-          <option value="f">fahreinheit</option>
+      <form id="temperatureForm">
+        <label for="temperature">Masukkan Suhu:</label>
+        <input
+          type="number"
+          id="temperature"
+          required
+          placeholder="Contoh: 25"
+        />
+
+        <label for="unit">Pilih Satuan Suhu Awal:</label>
+        <select id="unit">
+          <option value="celsius">Celsius (°C)</option>
+          <option value="fahrenheit">Fahrenheit (°F)</option>
         </select>
 
-        <button type="submit">konversi</button>
+        <button type="submit">Konversi</button>
       </form>
 
-      <div id="hasil"></div>
-      <div id="penjelasan"></div>
+      <div id="result" class="result"></div>
+      <div id="explanation" class="explanation"></div>
+
+      <div class="formula">
+        <h3>Rumus Konversi Suhu:</h3>
+        <p><strong>Fahrenheit:</strong> (°C × 9/5) + 32</p>
+        <p><strong>Celsius:</strong> (°F − 32) × 5/9</p>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
